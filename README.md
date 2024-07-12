@@ -10,8 +10,7 @@ pip install unipath  <!-- configurar estructura -->
 pip install psycopg2  <!-- ORM para PostgreSQL -->
 
 
-Verificacion base de datos PostgreSQL:
-
+Verificacion base de datos PostgreSQL:  <!-- en  base a esto debe hacer la base de tatos en le shell de PostgreSQL-->
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',   <!-- de ley indica con q motor trabajara -->
@@ -29,3 +28,6 @@ DATABASES = {
 Probar si corre el proyecto despues de instalar las tecnologias :
 (cd..) * 2  <!-- ir a la altura del archivo manage.py -->
 py manage.py runserver
+
+Crear un usuario admin al comprar q corre todo:
+py manage.py createsuperuser
