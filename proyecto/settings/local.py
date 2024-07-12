@@ -7,15 +7,18 @@ ALLOWED_HOSTS = []
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+""" postgresql_psycopg2 """
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'NombreBaseDatos',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  
+        'NAME': 'biblioteca',
         'USER': 'cris',
-        'PASSWORD': 'cristian2003',
+        'PASSWORD': 'cris2003',
         'HOST': 'localhost',
         'PORT': '5432',
+        'OPTIONS': {
+            'client_encoding': 'UTF8',
+        },
     }
 }
 
