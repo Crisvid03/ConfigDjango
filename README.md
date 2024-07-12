@@ -11,6 +11,7 @@ pip install psycopg2  <!-- ORM para PostgreSQL -->
 
 
 Verificacion base de datos PostgreSQL:
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',   <!-- de ley indica con q motor trabajara -->
@@ -24,8 +25,6 @@ DATABASES = {
         },
     }
 }
-
-
 
 Probar si corre el proyecto despues de instalar las tecnologias :
 (cd..) * 2  <!-- ir a la altura del archivo manage.py -->
