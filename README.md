@@ -44,3 +44,12 @@ crear aplicaciones :
 
 
 
+CODIGOS BASICOS GIT
+    <!-- 
+    git init
+    git add  o git rm para eliminar cosas (delete o modificacioone)
+    git commit -m "COMENTARIOS"
+    git remote -v
+    git remote add origin <URL Repositorio>
+    git push -u origin main 
+    -->
