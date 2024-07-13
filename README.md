@@ -8,6 +8,7 @@ Tecnologias al instalar con el entorno activo:
     pip install django <!-- framework -->
     pip install unipath  <!-- configurar estructura -->
     pip install psycopg2  <!-- ORM para PostgreSQL -->
+    pip install pillow <!-- trabajo con imagenes -->
 
 
 Verificacion base de datos PostgreSQL:  <!-- en  base a esto debe hacer la base de tatos en le shell de PostgreSQL-->
@@ -36,12 +37,16 @@ Crear un usuario admin al comprar q corre todo:
 crear aplicaciones :
     cd applications   <!-- direccion --> 
     django-admin startapp <NombreApp>   <!-- codigo creacion app -->
-
-
-
-
-
-
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        <!-- COLOCAR LAS APPS CREADAS -->
+        'applications.<NombreDeLaApp>   <!-- copia y pega en el name de app.py  -->
+    ]
 
 
 CODIGOS BASICOS GIT
