@@ -1,3 +1,4 @@
+<GUIA DE INSTALACION>
 Creacion y activacion de entrono virtual :
     py -m venv entorno <!-- cracion -->
     cd entorno/scripts  <!-- direccion -->
@@ -30,11 +31,13 @@ Probar si corre el proyecto despues de instalar las tecnologias :
     (cd..) * 2  <!-- ir a la altura del archivo manage.py -->
     py manage.py runserver   <!-- codigo para correr un servidor local -->
 
+<PROCESOS DE LEY PARA HACER UN PROYECTO>
+
 Crear un usuario admin al comprar q corre todo:
     py manage.py createsuperuser  <!-- codigo para cear un usuario administrador -->
     <!-- tener presente usuario y password -->
 
-crear aplicaciones :
+<crear aplicaciones :>
     cd applications   <!-- direccion --> 
     django-admin startapp <NombreApp>   <!-- codigo creacion app -->
     INSTALLED_APPS = [
@@ -47,9 +50,40 @@ crear aplicaciones :
         <!-- COLOCAR LAS APPS CREADAS -->
         'applications.<NombreDeLaApp>   <!-- copia y pega en el name de app.py  -->
     ]
+    <!-- 
+    hacer las migraciones y correr el servidor para verificar todo , hacer los modelos
+    necesarios 
+    -->
 
+URLS de la app (v.118.2:06)
+1. dentro de la carpeta de al app hacer un archivo urls.py
+2. pegar en urls.py :   <!-- esto esta en url dentro del archivo proyecto -->
 
-CODIGOS BASICOS GIT
+    from django.contrib import admin
+    from django.urls import 
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+    ]
+
+3. asi debe quedar el archivo urls.py de cada app :
+
+    from django.contrib import admin
+    from django.urls import path 
+    #importar vistas
+    from  . import views 
+
+    app_name= "<nombreApp>_urls"
+
+    urlpatterns = [
+        path(
+            'identificador-urls/', 
+            views.<NombreDeLaVista>.as_view(),
+            name = NombreCorto
+        ),
+    ]
+    hacer las vista en views q se menciona en la url
+
+<CODIGOS BASICOS GIT>
     <!-- 
     git init
     git add  o git rm para eliminar cosas (delete o modificacioone)
