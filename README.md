@@ -36,3 +36,11 @@ Crear un usuario admin al comprar q corre todo:
 crear aplicaciones :
     cd applications   <!-- direccion --> 
     django-admin startapp <NombreApp>   <!-- codigo creacion app -->
+
+
+
+
+
+
+
+
